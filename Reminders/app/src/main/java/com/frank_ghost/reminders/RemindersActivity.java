@@ -1,10 +1,17 @@
 package com.frank_ghost.reminders;
 
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -33,6 +40,8 @@ public class RemindersActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.action_exit:
                 //155 3216  5390
+                Intent intent = new Intent(RemindersActivity.this, WebViewActivity.class);
+                startActivityForResult(intent,1);
                 finish();
                 break;
             case R.id.action_new:
